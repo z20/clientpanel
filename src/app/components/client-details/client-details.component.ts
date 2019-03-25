@@ -36,5 +36,7 @@ export class ClientDetailsComponent implements OnInit {
       this.client = client;
     });
   }
-
+  onDeleteClick() {
+    console.log('Deleted...');
+  }
 }
