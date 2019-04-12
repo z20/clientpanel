@@ -24,7 +24,6 @@
       </div>
       <div class="col-md-8 col-sm-6">
         <h3 class="pull-right">
-<<<<<<< HEAD
         Balance
         <span
           [class.text-danger]="hasBalance"
@@ -38,22 +37,8 @@
           </a>
         </small>
         </h3>
-=======
-          Balance
-          <span
-            [class.text-danger]="hasBalance"
-            [class.text-success]="!hasBalance"
-          >
-            {{ client.balance | currency:"USD":"symbol" }}
-          </span>
-          <small>
-            <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput">
-              <i class="fa fa-pencil"></i>
-            </a>
-          </small>
-        </h3>
         <div class="clearfix">
-          <form *ngIf="showBalanceUpdateInput" (submit)="updateBalance()">
+          <form *ngIf="showBalanceUpdateInput" (submit)="updateBalance(id)">
             <div class="input-group">
               <input type="text" name="balance" class="form-control"
               [(ngModel)]="client.balance">
@@ -63,7 +48,6 @@
             </div>
           </form>
         </div>
->>>>>>> c6748b09a43d9fc311c6ea4627f411f6ab520117
       </div>
     </div>
     <hr>
